@@ -15,7 +15,7 @@ public class CategoryPost
         {
             Name = categoryRequest.Name
         };
-        context.Category.Add(category);
+        context.Categories.Add(category);
         context.SaveChanges();
 
         return Results.Created($"/categories/{category.Id}", category.Id);
