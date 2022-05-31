@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+﻿using System.IdentityModel.Tokens.Jwt;
 
 namespace IWantApp.Endpoints.Security;
 
@@ -16,9 +11,8 @@ public class TokenPost
     [AllowAnonymous]
     public static IResult Action(LoginRequest loginRequest, IConfiguration configuration, UserManager<IdentityUser> userManager)
     {
-        //consulta de usuario na base
         var user = userManager.FindByEmailAsync(loginRequest.Email).Result;
-        if(user == null)
+        if (user == null)
             Results.BadRequest();
         if (!userManager.CheckPasswordAsync(user, loginRequest.Password).Result)
             Results.BadRequest();
@@ -31,7 +25,6 @@ public class TokenPost
         });
         subject.AddClaims(claims);
 
-        //Receita de bolo pra geração de token
         var key = Encoding.ASCII.GetBytes(configuration["JwtBearerTokenSettings:SecretKey"]);
         var tokenDescriptor = new SecurityTokenDescriptor
         {

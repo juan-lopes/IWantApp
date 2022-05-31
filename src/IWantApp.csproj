@@ -1,10 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="Flunt.Notifications"/>
+        <Using Include="Microsoft.AspNetCore.Identity"/>
+        <Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"/>
+        <Using Include="Microsoft.EntityFrameworkCore"/>
+        <Using Include="System.Security.Claims;"/>
+        <Using Include="Microsoft.AspNetCore.Mvc"/>
+        <Using Include="Microsoft.AspNetCore.Authorization"/>
+        <Using Include="Microsoft.Data.SqlClient"/>
+        <Using Include="Microsoft.AspNetCore.Authentication.JwtBearer"/>
+        <Using Include="Microsoft.IdentityModel.Tokens"/>
+        <Using Include="Dapper"/>
+        <Using Include="System.Text"/>
+        <Using Include="Microsoft.AspNetCore.Diagnostics"/>
+
+        <Using Include="IWantApp.Domain.Products"/>
+        <Using Include="IWantApp.Infra.Data"/>
+        <Using Include="IWantApp.Endpoints.Categories"/>
+        <Using Include="IWantApp.Endpoints.Employees"/>
+        <Using Include="IWantApp.Endpoints.Security"/>
+    </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
