@@ -13,20 +13,20 @@ ASP.NET CORE WEB API for Ecommerce Orders
 - CategoryPut => Update specific category
 
 ##CLIENTS
-ClientPost => Create an customer account
-ClientGet => Return all customer specific data
+- ClientPost => Create an customer account
+- ClientGet => Return all customer specific data
 
 ##EMPLOYEES
-EmployeePost => Create an employee account
-EmployeeGetAll => Return all registered employees accounts
+- EmployeePost => Create an employee account
+- EmployeeGetAll => Return all registered employees accounts
 
 ##ORDERS
-OrderPost => Create a purchase order
+- OrderPost => Create a purchase order
 
 ##PRODUCT
-ProductPost => Create a product
-ProductGetAll => Returns all registered products
-ProductGetShowcase => Returns all active products that are registered
+- ProductPost => Create a product
+- ProductGetAll => Returns all registered products
+- ProductGetShowcase => Returns all active products that are registered
 
 ##SECURITY/Token
-TokenPost => Creates the token for the User to be able to perform specific requests
+- TokenPost => Creates the token for the User to be able to perform specific requests
