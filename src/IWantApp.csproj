@@ -23,7 +23,7 @@
         <Using Include="Serilog" />
         <Using Include="System.IdentityModel.Tokens.Jwt" />
         <Using Include="Serilog.Sinks.MSSqlServer" />
-
+        <Using Include="Flunt.Validations" />
 
         <Using Include="IWantApp.Domain.Products" />
         <Using Include="IWantApp.Infra.Data" />
