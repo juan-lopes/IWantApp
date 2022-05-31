@@ -7,26 +7,26 @@ ASP.NET CORE WEB API for Ecommerce Orders
 - Flunt
 - JwtBearer
 
-##CATEGORIES
+## CATEGORIES
 - CategoryPost => Create an product category
 - CategoryGetAll => Returns all registered categories
 - CategoryPut => Update specific category
 
-##CLIENTS
+## CLIENTS
 - ClientPost => Create an customer account
 - ClientGet => Return all customer specific data
 
-##EMPLOYEES
+## EMPLOYEES
 - EmployeePost => Create an employee account
 - EmployeeGetAll => Return all registered employees accounts
 
-##ORDERS
+## ORDERS
 - OrderPost => Create a purchase order
 
-##PRODUCT
+## PRODUCT
 - ProductPost => Create a product
 - ProductGetAll => Returns all registered products
 - ProductGetShowcase => Returns all active products that are registered
 
-##SECURITY/Token
+## SECURITY/Token
 - TokenPost => Creates the token for the User to be able to perform specific requests
