@@ -1,3 +1,5 @@
+using IWantApp.Domain.Users;
+using IWantApp.Endpoints.Clients;
 using IWantApp.Endpoints.Products;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -46,6 +48,8 @@ builder.Services.AddAuthentication(x =>
 });
 
 builder.Services.AddScoped<QueryAllUsersWithClaimName>();
+builder.Services.AddScoped<UserCreator>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -69,6 +73,9 @@ app.MapMethods(EmployeeGetAll.Template, EmployeeGetAll.Methods, EmployeeGetAll.H
 app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Handle);
 app.MapMethods(ProductPost.Template, ProductPost.Methods, ProductPost.Handle);
 app.MapMethods(ProductGetAll.Template, ProductGetAll.Methods, ProductGetAll.Handle);
+app.MapMethods(ProductGetShowcase.Template, ProductGetShowcase.Methods, ProductGetShowcase.Handle);
+app.MapMethods(ClientPost.Template, ClientPost.Methods, ClientPost.Handle);
+app.MapMethods(ClientGet.Template, ClientGet.Methods, ClientGet.Handle);
 
 app.UseExceptionHandler("/error");
 app.Map("/error", (HttpContext http) =>
