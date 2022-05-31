@@ -1,7 +1,3 @@
-using IWantApp.Domain.Users;
-using IWantApp.Endpoints.Clients;
-using IWantApp.Endpoints.Products;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseSerilog((context, configuration) =>
 {
@@ -25,6 +21,8 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("EmployeePolicy", p =>
         p.RequireAuthenticatedUser().RequireClaim("EmployeeCode"));
+    options.AddPolicy("CpfPolicy", p =>
+        p.RequireAuthenticatedUser().RequireClaim("Cpf"));
 });
 builder.Services.AddAuthentication(x =>
 {

@@ -1,6 +1,4 @@
-﻿using IWantApp.Domain.Users;
-
-namespace IWantApp.Endpoints.Employees;
+﻿namespace IWantApp.Endpoints.Employees;
 
 public class EmployeePost
 {
